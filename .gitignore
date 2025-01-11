@@ -1,0 +1,58 @@
+# Thư mục hệ thống Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Tệp cấu hình hệ thống
+*.pidb.meta
+*.pidb.meta.meta
+
+# Thư mục cache của Unity
+*[Cc]ache/
+
+# Tệp Unity Cloud Build
+*.aps
+
+# Tệp môi trường phát triển (như Visual Studio)
+.vscode/
+.idea/
+*.tmproj
+*.tmproj-*
+*.swp
+.DS_Store
+*.sln.*
+*.log
+
+# Tệp lỗi và dump
+*.stackdump
+*.crash
+
+# Tệp xây dựng (binaries) và nhị phân
+*.apk
+*.aab
+*.ipa
+*.dll
+*.exe
+*.app
+*.jks
+*.keystore
+*.p12
+
+# Thư mục quản lý phụ thuộc
+Packages/*
+!Packages/manifest.json
+!Packages/packages-lock.json
