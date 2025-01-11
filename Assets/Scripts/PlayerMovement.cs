@@ -18,10 +18,29 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     public LayerMask groundLayer;
 
+    [Header("Gravity")]
+    public float baseGraviry = 2;
+    public float maxFallSpeed = 10f;
+    public float fallSpeedMultiplier = 2f;
+
     void Update()
     {
         rb.linearVelocity = new Vector2(horizontalMovement * moveSpeed, rb.linearVelocityY);
         GroundCheck();
+        Gravity();
+    }
+
+    private void Gravity()
+    {
+        if (rb.linearVelocityY < 0)
+        {
+            rb.gravityScale = baseGraviry * fallSpeedMultiplier;
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, Mathf.Max(rb.linearVelocityY, -maxFallSpeed));
+        }
+        else
+        {
+            rb.gravityScale = baseGraviry;
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
